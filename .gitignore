@@ -1,0 +1,5 @@
+node_modules/
+out/
+*.local
+.DS_Store
+.playwright-mcp/
