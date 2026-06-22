@@ -1,0 +1,14 @@
+{
+  "name": "reconcile",
+  "version": "0.1.0",
+  "description": "The unified creative-verification engine — one operation (the reconcile) over one substrate; every generator an organ; the whole loop witnessed. Zero dependencies; runs in node and the browser.",
+  "type": "module",
+  "bin": { "reconcile": "cli.js" },
+  "exports": { ".": "./src/index.js" },
+  "scripts": { "test": "node --test", "create": "node cli.js create" },
+  "license": "AGPL-3.0-or-later",
+  "author": "Zain Dana Harper",
+  "keywords": ["generative", "verification", "reconcile", "creative", "refine", "compose", "zero-dependency", "glsl", "witnessed", "novelty"],
+  "files": ["src", "cli.js", "web", "README.md", "LICENSE"],
+  "engines": { "node": ">=18" }
+}
