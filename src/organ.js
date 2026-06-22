@@ -18,6 +18,17 @@ export function clampParams(organ, params) {
 export function makeArtifact(organ, params) { return organ.make(clampParams(organ, params)); }
 export function organFeatures(organ, params) { return featuresOf(makeArtifact(organ, params)); }
 
+// a deterministic rough-draft parameter vector from a seed — each param perturbed around its default
+export function seedParams(organ, seed) {
+  const out = defParams(organ);
+  const s = (seed * 2654435761 + 12345) >>> 0;
+  organ.params.forEach((p, i) => {
+    const frac = (((s >> (i * 5)) % 1000) / 1000 - 0.5);
+    out[p.k] = Math.max(p.min, Math.min(p.max, p.def + frac * (p.max - p.min) * 0.6));
+  });
+  return out;
+}
+
 // registry
 const REG = new Map();
 export function register(...organs) { for (const o of organs) REG.set(o.id, o); return organs; }
