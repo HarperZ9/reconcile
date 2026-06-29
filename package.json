@@ -1,7 +1,7 @@
 {
   "name": "reconcile",
   "version": "0.1.0",
-  "description": "The unified creative-verification engine — one operation (the reconcile) over one substrate; every generator an organ; the whole loop witnessed. Zero dependencies; runs in node and the browser.",
+  "description": "Zero-dependency Node/browser engine that turns creative generators into replayable worlds with criteria, refinement, and receipts.",
   "type": "module",
   "bin": { "reconcile": "cli.js" },
   "exports": { ".": "./src/index.js" },
