@@ -109,3 +109,12 @@ the refine primitive) and the **atelier** (the organ library) into one ownable e
 author retains copyright (commercial terms available).
 
 **Zain Dana Harper** — small tools with explicit edges. Built with Claude Code; reviewed, tested, owned.
+
+## For developers
+
+Keep the public README, package metadata, and examples aligned with current behavior. Before opening a PR or pushing a release, run the local Node verification path.
+
+```bash
+npm install
+npm test
+```
