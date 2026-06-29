@@ -1,5 +1,38 @@
 # reconcile
 
+<p align="center">
+  <img src="docs/brand/reconcile-hero.png" alt="Reconcile, turn creative generators into replayable browser worlds">
+</p>
+
+> Turn creative generators into replayable browser worlds.
+
+## Try it
+
+```bash
+node cli.js create gyroid --seed 7 --out out
+python -m http.server
+```
+
+Then open `web/index.html` in a browser.
+
+## Why it matters
+
+Generative engines are easier to trust when their output is inspectable. Reconcile keeps the generated world, criteria, refinement path, browser render program, and receipt together, so a creative run can be replayed instead of merely admired.
+
+## What to test first
+
+- Generate a `gyroid` world from the CLI and inspect the output JSON and SVG preview.
+- Open the browser demo and confirm the same engine module runs client-side.
+- Change the seed and confirm the world identity, trajectory, and receipt change deterministically.
+
+## Current status
+
+- **Runtime:** Node 18+ and browser ESM; zero runtime dependencies.
+- **Surface:** CLI, library API, direct browser import, WebGL render programs, SVG previews, and receipts.
+- **Scope:** Reconcile emits programs and replayable creative records. Native rendering and audio playback remain host responsibilities.
+
+## Technical framing
+
 > The unified creative-verification engine. **One operation — the reconcile — over one substrate;
 > every generator an organ; the whole loop witnessed.** Zero dependencies; runs in **node and the
 > browser** from the same source.
