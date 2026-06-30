@@ -1,4 +1,4 @@
-// Features — the measurable shape of an artifact, the input the criteria judge.
+// Features -- the measurable shape of an artifact, the input the criteria judge.
 // Two readers (ported from studio-engine _features): a point cloud, and a field expr sampled on a
 // grid. featuresOf() dispatches on the artifact an organ produced, so every organ is judged the same.
 import { sampleField } from "./expr.js";

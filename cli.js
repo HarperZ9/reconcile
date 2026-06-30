@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-// reconcile CLI — drive the engine headless. perceive → generate → critique → refine → witness.
+// reconcile CLI -- drive the engine headless. perceive → generate → critique → refine → witness.
 import { writeFileSync, mkdirSync } from "node:fs";
 import { create, compose } from "./src/reconcile.js";
 import { organIds } from "./src/organ.js";
 import { svgOfWorld } from "./src/preview.js";
 
 function usage() {
-  console.log(`reconcile — the unified creative-verification engine
+  console.log(`reconcile -- the unified creative-verification engine
 
   reconcile create <organ> [--seed N] [--scheme S] [--no-refine] [--out DIR]
   reconcile compose <organ,organ,...> [--seed N] [--scheme S] [--out DIR]

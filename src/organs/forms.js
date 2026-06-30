@@ -1,4 +1,4 @@
-// Form organs — point clouds / curves. Each make(p) returns { kind:"points", points, recipe }:
+// Form organs -- point clouds / curves. Each make(p) returns { kind:"points", points, recipe }:
 // points feed the features; the recipe is the portable render description. Ported from the atelier +
 // studio-engine point generators.
 const rad = (d) => d * Math.PI / 180;

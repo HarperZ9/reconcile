@@ -1,4 +1,4 @@
-// cyrb53 — a fast, well-distributed SYNCHRONOUS content hash (node + browser, zero-dep).
+// cyrb53 -- a fast, well-distributed SYNCHRONOUS content hash (node + browser, zero-dep).
 // Used for reproducible content ids / witnesses (identity + tamper-evidence, not cryptographic
 // security). A SHA-256 witness via the platform crypto is a documented upgrade for v0.2.
 export function hashHex(str, seed = 0) {

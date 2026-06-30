@@ -1,4 +1,4 @@
-// reconcile — THE engine. One organ in, one witnessed World out, via the full loop:
+// reconcile -- THE engine. One organ in, one witnessed World out, via the full loop:
 //   perceive (seed → rough draft) → generate → critique → refine (toward correct + novel) →
 //   choreograph (timeline) → witness (World + receipt).
 // create() does a single organ; compose() (re-exported) layers several. The trajectory IS the

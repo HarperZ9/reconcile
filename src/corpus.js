@@ -1,4 +1,4 @@
-// Corpus — grounds NOVELTY: how unlike everything made before. Novelty = normalized nearest-
+// Corpus -- grounds NOVELTY: how unlike everything made before. Novelty = normalized nearest-
 // neighbour distance in feature space. Without a corpus an engine repeats itself; with one,
 // "novel" is a checkable claim, not a vibe. Persistable as plain JSON (node file / browser
 // localStorage). Ported from studio-engine corpus.py.

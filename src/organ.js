@@ -1,7 +1,7 @@
-// Organ — the unifying abstraction. Every generator, field or form, is one shape:
+// Organ -- the unifying abstraction. Every generator, field or form, is one shape:
 //   { id, label, kind:"field"|"points", params:[{k,min,max,step,def}], axes:[criterion...], make(p)->artifact }
 // A field organ's artifact carries an `expr` (-> GLSL, sampled for features); a form organ's carries
-// `points` (+ a recipe). The engine treats all organs identically — generate, judge, refine, compose.
+// `points` (+ a recipe). The engine treats all organs identically -- generate, judge, refine, compose.
 import { featuresOf } from "./features.js";
 
 export function defParams(organ) {
@@ -18,7 +18,7 @@ export function clampParams(organ, params) {
 export function makeArtifact(organ, params) { return organ.make(clampParams(organ, params)); }
 export function organFeatures(organ, params) { return featuresOf(makeArtifact(organ, params)); }
 
-// a deterministic rough-draft parameter vector from a seed — each param perturbed around its default
+// a deterministic rough-draft parameter vector from a seed -- each param perturbed around its default
 export function seedParams(organ, seed) {
   const out = defParams(organ);
   const s = (seed * 2654435761 + 12345) >>> 0;
