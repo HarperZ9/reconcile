@@ -1,4 +1,4 @@
-// Compose — layer organs into one witnessed World, scored by a composition criterion (depth
+// Compose -- layer organs into one witnessed World, scored by a composition criterion (depth
 // complementarity + contrast balance). The reconcile's compose() at the scene level; each layer is
 // itself refined toward correct. Ported from studio-engine compose.py.
 import { getOrgan, seedParams } from "./organ.js";

@@ -1,6 +1,6 @@
-// Criteria — each scores an artifact's features (+ its params) in 0..1 against a property the
+// Criteria -- each scores an artifact's features (+ its params) in 0..1 against a property the
 // generator did NOT author. Cohesion is the harmonic mean: a candidate must be good on EVERY axis
-// (imbalance is punished) — CORRECT, not good-on-average. Ported from studio-engine criteria.py.
+// (imbalance is punished) -- CORRECT, not good-on-average. Ported from studio-engine criteria.py.
 export const GOLDEN_ANGLE = 137.50776405003785;
 const clamp = (v, lo, hi) => (v < lo ? lo : v > hi ? hi : v);
 

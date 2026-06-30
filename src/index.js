@@ -1,4 +1,4 @@
-// reconcile — the unified creative-verification engine. Public API.
+// reconcile -- the unified creative-verification engine. Public API.
 export * as expr from "./expr.js";
 export { create, compose } from "./reconcile.js";
 export { refine, evaluate } from "./refine.js";

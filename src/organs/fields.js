@@ -1,4 +1,4 @@
-// Field organs — implicit scalar fields as strand exprs. Each make(p) returns
+// Field organs -- implicit scalar fields as strand exprs. Each make(p) returns
 // { kind:"field", expr, t0, animatable, period }: one closed-form source the engine samples for
 // features, emits as GLSL, and animates over t. Ported from studio-engine's field generators.
 import { c, v, sin, cos, add, mul, sub, div, sqrt } from "../expr.js";

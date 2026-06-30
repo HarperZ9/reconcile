@@ -9,6 +9,9 @@
   "license": "AGPL-3.0-or-later",
   "author": "Zain Dana Harper",
   "keywords": ["generative", "verification", "reconcile", "creative", "refine", "compose", "zero-dependency", "glsl", "witnessed", "novelty"],
-  "files": ["src", "cli.js", "web", "README.md", "LICENSE"],
+  "files": ["src", "cli.js", "web", "docs/brand", "README.md", "LICENSE"],
+  "repository": { "type": "git", "url": "git+https://github.com/HarperZ9/reconcile.git" },
+  "bugs": { "url": "https://github.com/HarperZ9/reconcile/issues" },
+  "homepage": "https://github.com/HarperZ9/reconcile#readme",
   "engines": { "node": ">=18" }
 }

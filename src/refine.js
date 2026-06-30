@@ -1,6 +1,6 @@
-// Refine — the creation drive. From a starting point, judge against the criteria, reflect on the
-// weakest axis, and move the parameter vector to improve COHESION (which folds in novelty) — bounded
-// coordinate descent — until the artifact is CORRECT on every axis, or budget's spent (honest
+// Refine -- the creation drive. From a starting point, judge against the criteria, reflect on the
+// weakest axis, and move the parameter vector to improve COHESION (which folds in novelty) -- bounded
+// coordinate descent -- until the artifact is CORRECT on every axis, or budget's spent (honest
 // best-effort). The witnessed trajectory IS the reasoning. Ported from studio-engine's refine loop.
 import { score, cohesion, tag } from "./criteria.js";
 import { organFeatures, clampParams } from "./organ.js";

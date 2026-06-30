@@ -1,4 +1,4 @@
-// Temporal — witnessed motion. For an animatable field, sample across one loop period and verify
+// Temporal -- witnessed motion. For an animatable field, sample across one loop period and verify
 // (a) continuity: the seam delta is no larger than the interior deltas (no pop), and (b) on-criterion:
 // the dynamic range stays comparable across the loop (stays legible). Ported from studio-engine.
 import { sampleField } from "./expr.js";

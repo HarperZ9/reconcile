@@ -1,4 +1,4 @@
-// preview.js — render a World to a static SVG (node export + browser fallback). Re-derives each
+// preview.js -- render a World to a static SVG (node export + browser fallback). Re-derives each
 // layer's artifact from its organ + params and samples it: field layers as colored rects, form
 // layers as dots. Zero-dep; the live WebGL render is the chamber's job, this is the portable proof.
 import { sampleField } from "./expr.js";

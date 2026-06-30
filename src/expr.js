@@ -1,4 +1,4 @@
-// The strand expression algebra — the substrate every backend derives from.
+// The strand expression algebra -- the substrate every backend derives from.
 // A frozen closed-form AST over vars u,v,t (fields) and x,y,i (point maps): one source, sampled
 // for the features criteria judge, emitted as GLSL for the eye, parsed back for the grounding
 // proof. Ported from studio-engine's strand. Pure; zero-dep; node + browser.

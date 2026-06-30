@@ -1,4 +1,4 @@
-// The chamber — drives the reconcile engine live in the browser (the engine IS this page's module).
+// The chamber -- drives the reconcile engine live in the browser (the engine IS this page's module).
 import { create, compose, getOrgan, makeArtifact, organIds } from "../src/index.js";
 
 const $ = (s) => document.querySelector(s);
@@ -66,7 +66,7 @@ function render(w) {
     $("#axes").innerHTML = Object.entries(acc.margins).map(([k, v]) =>
       `<div class="ax${k === acc.weakest ? " w" : ""}"><span>${k}${k === acc.weakest ? " ◀" : ""}</span><span class="bar"><i style="width:${Math.round(v * 100)}%"></i></span><b>${(+v).toFixed(3)}</b></div>`).join("");
     $("#reason").innerHTML = `<b class="tag ${t.tag}">${t.tag}</b> cohesion <b>${t.cohesion}</b> · ${t.steps.length} refine steps · ${t.converged ? "converged" : "best-effort"}`;
-  } else { $("#axes").innerHTML = ""; $("#reason").textContent = "—"; }
+  } else { $("#axes").innerHTML = ""; $("#reason").textContent = "--"; }
   $("#tl").innerHTML = w.timeline ? `period ${w.timeline.period}s · continuity <b class="tag ${w.timeline.continuity.tag}">${w.timeline.continuity.tag}</b> · on-criterion <b class="tag ${w.timeline.on_criterion.tag}">${w.timeline.on_criterion.tag}</b>` : "static";
   $("#comp").innerHTML = w.composition ? `composition <b class="tag ${w.composition.tag}">${w.composition.tag}</b> ${w.composition.score}` : "";
   $("#rc").innerHTML = `id ${w.receipt.id} · seed ${w.receipt.seed}<br>organs ${w.receipt.organs.join(", ")}<br>witness ${w.receipt.witness}`;

@@ -1,7 +1,7 @@
-// World — the witnessed output. Each layer carries a drop-in render program (a self-contained WebGL
+// World -- the witnessed output. Each layer carries a drop-in render program (a self-contained WebGL
 // fragment for field organs; a point recipe for forms), value_range sampled across the loop, and an
 // expr digest. The World carries the trajectory (the reasoning), timeline (the motion), composition
-// verdict, palette, and a receipt — grounded, reproducible, re-checkable.
+// verdict, palette, and a receipt -- grounded, reproducible, re-checkable.
 import { hashHex } from "./hash.js";
 import { emitGLSL, GLSL_HELPERS, sampleField, sha as exprSha } from "./expr.js";
 

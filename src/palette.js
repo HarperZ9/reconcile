@@ -1,4 +1,4 @@
-// palette.js — a tiny deterministic hue-ramp palette (zero-dep). Not OKLab; a clean, seeded ramp
+// palette.js -- a tiny deterministic hue-ramp palette (zero-dep). Not OKLab; a clean, seeded ramp
 // the chamber themes from. Same (seed, n, scheme) -> same hex list.
 function hslToHex(h, s, l) {
   const a = s * Math.min(l, 1 - l);
