@@ -1,12 +1,20 @@
-<p align="center"><img src=".github/assets/banner.png" alt="reconcile" width="100%"></p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/HarperZ9/reconcile/main/docs/art/hero-dark.svg">
+  <img src="https://raw.githubusercontent.com/HarperZ9/reconcile/main/docs/art/hero-light.svg" alt="reconcile: Turn creative generators into replayable browser worlds. Streamlines of fine lines spiral inward around a bright core." width="100%">
+</picture>
 
 # reconcile
 
-<p align="center">
-  <img src="docs/brand/reconcile-hero.png" alt="Reconcile, turn creative generators into replayable browser worlds">
-</p>
+Turn creative generators into replayable browser worlds.
 
-> Turn creative generators into replayable browser worlds.
+```
+node cli.js create gyroid --seed 7 --out out
+```
+
+[![version: 0.2.0](https://img.shields.io/badge/version-0.2.0-e6e1d6?style=flat-square&labelColor=1a1712)](https://github.com/HarperZ9/reconcile/releases/latest)
+[![CI](https://github.com/HarperZ9/reconcile/actions/workflows/ci.yml/badge.svg)](https://github.com/HarperZ9/reconcile/actions/workflows/ci.yml)
+[![license](https://img.shields.io/badge/license-FSL--1.1--MIT-e6e1d6?style=flat-square&labelColor=1a1712)](https://github.com/HarperZ9/reconcile/blob/main/LICENSE)
+![node 18+](https://img.shields.io/badge/node-18%2B-e6e1d6?style=flat-square&labelColor=1a1712)
 
 ## Try it
 

@@ -29,7 +29,7 @@ test("public and developer delivery files exist", () => {
     "AGENTS.md",
     ".github/FUNDING.yml",
     ".github/workflows/ci.yml",
-    "docs/brand/reconcile-hero.png",
+    "docs/art/social.png",
     "project-docs/specs/SPEC-reconcile-forward-delivery.md",
   ];
 
@@ -42,7 +42,7 @@ test("README serves public and developer audiences", () => {
   for (const heading of ["## Try it", "## Why it matters", "## For developers"]) {
     assert.ok(text.includes(heading), `missing ${heading}`);
   }
-  assert.ok(text.includes("docs/brand/reconcile-hero.png"));
+  assert.ok(text.includes("docs/art/hero-light.svg") && text.includes("docs/art/hero-dark.svg"));
   assert.ok(text.toLowerCase().includes("replayable browser worlds"));
   assert.ok(text.includes("USAGE.md"));
   assert.ok(text.includes("CHANGELOG.md"));
