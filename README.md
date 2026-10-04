@@ -42,7 +42,7 @@ Generative engines are easier to trust when their output is inspectable. Reconci
 
 ![node](https://img.shields.io/badge/node-%E2%89%A518-blue.svg)
 ![deps: none](https://img.shields.io/badge/deps-none-success.svg)
-![license: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)
+[![license: FSL-1.1-MIT](https://img.shields.io/badge/license-FSL--1.1--MIT-blue.svg)](LICENSE)
 
 A generated artifact here is never just "what its seed says." It is **perceived**, **judged against a
 criterion it did not author**, **refined toward correct**, optionally **composed** with others and
@@ -108,8 +108,8 @@ upgrade). The criteria are grounded aesthetic axes -- a coarse, honest read, not
 ## Provenance
 
 Synthesizes and unifies the proven math of **studio-engine** (the strand substrate, the World contract,
-the refine primitive) and the **atelier** (the organ library) into one ownable engine. AGPL-3.0; the
-author retains copyright (commercial terms available).
+the refine primitive) and the **atelier** (the organ library) into one ownable engine. FSL-1.1-MIT
+from v0.2.0 (see License below); the author retains copyright.
 
 **Zain Dana Harper** -- small tools with explicit edges. Built with Claude Code; reviewed, tested, owned.
 
@@ -124,6 +124,10 @@ npm test
 
 See [AGENTS.md](AGENTS.md) for the repo-specific operating boundary and
 [CHANGELOG.md](CHANGELOG.md) for current delivery status.
+
+## License
+
+From v0.2.0, code is licensed FSL-1.1-MIT. Earlier releases remain under AGPL-3.0-or-later. FSL-1.1-MIT is the Functional Source License, Version 1.1, with MIT as the future licence: each release becomes available under MIT two years after it is made available. See [LICENSE](LICENSE). Every commit in this repository is by the author.
 
 ---
 
