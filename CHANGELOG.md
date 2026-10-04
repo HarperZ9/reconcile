@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.0 (unreleased)
+
+- From v0.2.0, code is licensed FSL-1.1-MIT. Earlier releases remain under AGPL-3.0-or-later.
+- `LICENSE` is the FSL-1.1-MIT text from fsl.software, with licensor Zain Dana Harper and copyright 2026.
+- `package.json` declares `FSL-1.1-MIT` and version 0.2.0. No code changed.
+- No version was tagged before this change, so AGPL-3.0-or-later covers every commit before it.
+
 ## 2026-06-29 - Forward Delivery Contract
 
 - Added `AGENTS.md`, `USAGE.md`, CI, and a Node delivery regression test.
