@@ -26,6 +26,12 @@ python -m http.server
 Then open `web/index.html` in a browser. For the full local workflow, see
 [USAGE.md](USAGE.md).
 
+## See it work, step by step
+
+The [animated explainer](https://harperz9.github.io/repo-explainers/reconcile.html)
+walks through generating a gyroid world, refining it toward its weakest axis, the best-effort label, the shader program and receipt, and replaying the same id. Every value on it is output from this repository. Its
+source is [docs/explainer/index.html](docs/explainer/index.html).
+
 ## Why it matters
 
 Generative engines are easier to trust when their output is inspectable. Reconcile keeps the generated world, criteria, refinement path, browser render program, and receipt together, so a creative run can be replayed instead of merely admired.
