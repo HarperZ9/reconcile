@@ -32,6 +32,43 @@ The [animated explainer](https://harperz9.github.io/repo-explainers/reconcile.ht
 walks through generating a gyroid world, refining it toward its weakest axis, the best-effort label, the shader program and receipt, and replaying the same id. Every value on it is output from this repository. Its
 source is [docs/explainer/index.html](docs/explainer/index.html).
 
+## Watch
+
+No concept film fits this tool closely yet. The walkthrough below covers it in text, with real commands and output.
+
+Video walkthrough: coming with the next release.
+
+## Walkthrough
+
+Install it, run it once, then use the main feature. Each command below is real, and so is its output.
+
+1. **Get it.** Clone it. Node 18 or newer, no install step.
+
+   ```text
+   $ git clone https://github.com/HarperZ9/reconcile && cd reconcile
+   ```
+
+2. **First run: create a world.** Generate a gyroid at seed 7. It is refined toward its weakest axis and labelled best-effort when it stops short of the target.
+
+   ```text
+   $ node cli.js create gyroid --seed 7 --out out
+   reasoning: 10 steps · cohesion 0.8624
+   margins: clean_freq=1.00 contrast=0.73 complexity=0.79 novelty=1.00
+   ```
+
+3. **Compose two generators.** Layer two generators and score the composition.
+
+   ```text
+   $ node cli.js compose gyroid,phyllotaxis --seed 7
+   composition: 0.5829 (depth_complementarity=0.425, contrast_balance=0.9273)
+   ```
+
+4. **See it in a browser.** Serve the folder and open `web/index.html` to run the same engine and render the shader in WebGL.
+
+   ```text
+   $ python -m http.server
+   ```
+
 ## Why it matters
 
 Generative engines are easier to trust when their output is inspectable. Reconcile keeps the generated world, criteria, refinement path, browser render program, and receipt together, so a creative run can be replayed instead of merely admired.
