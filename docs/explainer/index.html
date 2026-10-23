@@ -171,13 +171,13 @@ ol.walkthrough p{margin:0 0 .3rem;max-width:44rem}
 <section class="block wrap" aria-labelledby="for-you">
   <h2 id="for-you">What it does for you</h2>
   <div class="measure">
-    <p>A generated image is easier to trust when you can see how it was made and make it again. reconcile runs a generator, scores the result against criteria the generator did not write, adjusts its parameters toward the weakest score, and writes everything into one World record: the shader program, the refinement path, a motion timeline, a palette and a receipt. The same generator and seed give the same World in Node and in the browser.</p>
+    <p>A generated image is easier to trust when you can see how it was made and make it again. reconcile runs a generator, scores the result against criteria written separately from the generator, adjusts its parameters toward the weakest score, and writes everything into one World record: the shader program, the refinement path, a motion timeline, a palette and a receipt. The same generator and seed give the same World in Node and in the browser.</p>
   </div>
   <ul class="uses">
     <li><b>Ten generators</b>Seven field generators emit closed-form expressions; three form generators emit point recipes.</li>
     <li><b>Refinement you can read</b>Every step records its parameters, scores and the weakest axis it moved toward.</li>
-    <li><b>Honest labels</b>A result short of the target is labelled best-effort, never verified.</li>
-    <li><b>No dependencies</b>Node 18 or newer, or a browser that imports the same module.</li>
+    <li><b>Labels that match the result</b>A result short of the target is labelled best-effort; verified is kept for results that reach it.</li>
+    <li><b>One module</b>Runs in Node 18 or newer, or in a browser that imports the same file.</li>
   </ul>
   <p class="src">Source: <a href="https://github.com/HarperZ9/reconcile/blob/ba20136e330e489bf36d6ed9334d15ae87e7e77b/README.md">README.md</a> at ba20136 (version 0.2.0)</p>
 </section>
@@ -211,7 +211,7 @@ ol.walkthrough p{margin:0 0 .3rem;max-width:44rem}
       </div></li>
       <li class="step" tabindex="-1" data-scene="k1" data-state="s"><div class="card">
         <span class="num">02</span><h3>Score it on every axis</h3>
-        <p>The gyroid is sampled and scored from 0 to 1 on axes it did not author: how close its frequency sits to a whole number, its contrast, its complexity, and its novelty against earlier results. The overall cohesion is the harmonic mean, so one weak axis pulls the whole score down.</p>
+        <p>The gyroid is sampled and scored from 0 to 1 on axes defined outside the generator: how close its frequency sits to a whole number, its contrast, its complexity, and its novelty against earlier results. The overall cohesion is the harmonic mean, so one weak axis pulls the whole score down.</p>
         <p>At the seed's starting point, with frequency 6.928, cohesion is 0.8237 and contrast is the weakest axis.</p>
         <p class="src">Source: <a href="https://github.com/HarperZ9/reconcile/blob/ba20136e330e489bf36d6ed9334d15ae87e7e77b/src/criteria.js">src/criteria.js</a>, <a href="https://github.com/HarperZ9/reconcile/blob/ba20136e330e489bf36d6ed9334d15ae87e7e77b/src/refine.js">src/refine.js</a>, <code>evaluate</code></p>
       </div></li>
@@ -228,7 +228,7 @@ ol.walkthrough p{margin:0 0 .3rem;max-width:44rem}
       </div></li>
       <li class="step" tabindex="-1" data-scene="k4" data-state="s"><div class="card">
         <span class="num">05</span><h3>Emit a program, a timeline and a receipt</h3>
-        <p>The World carries the shader as data: a GLSL fragment program for the field sin(2u)cos(2v) + sin(2v)cos(2t) + sin(2t)cos(2u), with the refined frequency of 2. A motion timeline with a period of pi seconds is checked for a loop with no jump and for staying on criterion. A six-colour palette and a receipt with the seed, generator, content hash and witness close the record.</p>
+        <p>The World carries the shader as data: a GLSL fragment program for the field sin(2u)cos(2v) + sin(2v)cos(2t) + sin(2t)cos(2u), with the refined frequency of 2. A motion timeline with a period of pi seconds is checked for a seamless loop and for staying on criterion. A six-colour palette and a receipt with the seed, generator, content hash and witness close the record.</p>
         <p class="src">Source: <a href="https://github.com/HarperZ9/reconcile/blob/ba20136e330e489bf36d6ed9334d15ae87e7e77b/src/world.js">src/world.js</a>, <a href="https://github.com/HarperZ9/reconcile/blob/ba20136e330e489bf36d6ed9334d15ae87e7e77b/src/temporal.js">src/temporal.js</a>, <a href="https://github.com/HarperZ9/reconcile/blob/ba20136e330e489bf36d6ed9334d15ae87e7e77b/src/expr.js">src/expr.js</a></p>
       </div></li>
       <li class="step" tabindex="-1" data-scene="k5" data-state="s"><div class="card">
@@ -244,7 +244,7 @@ ol.walkthrough p{margin:0 0 .3rem;max-width:44rem}
   <h2 id="walkthrough">Walkthrough</h2>
   <p class="measure">Install it, run it once, then use the main feature. Each command below is real, and so is its output.</p>
   <ol class="walkthrough">
-    <li><h3>Get it</h3><p>Clone it. Node 18 or newer, no install step.</p>
+    <li><h3>Get it</h3><p>Clone it and run it with Node 18 or newer.</p>
 <pre class="cmd"><code>$ git clone https://github.com/HarperZ9/reconcile && cd reconcile</code></pre></li>
     <li><h3>First run: create a world</h3><p>Generate a gyroid at seed 7. It is refined toward its weakest axis and labelled best-effort when it stops short of the target.</p>
 <pre class="cmd"><code>$ node cli.js create gyroid --seed 7 --out out
@@ -260,13 +260,13 @@ margins: clean_freq=1.00 contrast=0.73 complexity=0.79 novelty=1.00</span></code
 </section>
 
 <section class="block wrap" aria-labelledby="limits">
-  <h2 id="limits">What it does not do</h2>
+  <h2 id="limits">Limits</h2>
   <ul class="limits">
-    <li>The criteria are coarse aesthetic axes. A high cohesion is a measured read of those axes and makes no claim about beauty or quality.</li>
-    <li>The content hash is cyrb53, a fast digest for identity and tamper evidence. It is not cryptographic.</li>
+    <li>The criteria are coarse aesthetic axes. A high cohesion is a measured read of those axes; beauty is for you to judge.</li>
+    <li>The content hash is cyrb53, a fast digest for identity and tamper evidence. Use a cryptographic hash where you need one.</li>
     <li>The engine emits shader programs and point recipes as data and checks them on the CPU. Rendering and audio belong to the host.</li>
   </ul>
-  <p class="src">Source: README.md at ba20136, "Honest scope" and "Current status"</p>
+  <p class="src">Source: README.md at ba20136, the scope and current status sections</p>
 </section>
 
 <section class="block wrap recall" aria-labelledby="recall">
